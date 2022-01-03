@@ -1,9 +1,10 @@
 package main.java;
 
 public class Service extends CasePropriete {
-	int loyer = 15;
+	
     public Service(String nom, int cout, int prixMaison,Quartier q) {
 		super(nom, cout, prixMaison,q);
+		loyer = 15;
 	}
 
 	public int calculLoyer() {

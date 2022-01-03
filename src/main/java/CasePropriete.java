@@ -24,10 +24,6 @@ public class CasePropriete extends Case {
     	etat.atterirJoueur(joueur);
     }
 
-    public boolean estPropietaite(Joueur joueur) {
-		return false;
-    }
-
   
     public int recupererPrixAchat() {
 		return cout;
@@ -36,15 +32,6 @@ public class CasePropriete extends Case {
     public boolean estConstructible(Joueur j) {
     	return etat.estConstructible() && j.equals(this.j);
     }
-
-
-    public void augmenterLoyer(int loyer) {
-    }
-
-
-    public void changerEtatCases(Etat etat) {
-    }
-
 
     public void acheterCase(Joueur joueur) {
     	etat.acheterCase(joueur);
