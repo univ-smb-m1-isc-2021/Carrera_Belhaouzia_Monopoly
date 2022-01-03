@@ -1,5 +1,4 @@
-package main;
-
+package main.java;
 public class Etat{
 
 	public CasePropriete c;

@@ -1,13 +1,11 @@
-package main;
-
-
-public class Constructible extends Etat {
-    public Constructible(CasePropriete c) {
+package main.java;
+public class NonConstructible extends Etat {
+    public NonConstructible(CasePropriete c) {
 		super(c);
 	}
 
 	public boolean estConstructible() {
-		return true;
+		return false;
     }
 
     public void atterirJoueur(Joueur joueur) {
@@ -40,8 +38,5 @@ public class Constructible extends Etat {
     }
 
     public void construireMaison() {
-    	c.getProprietaire().debiterJoueur(c.getPrixMaison());
-    	c.setNbMaison(1);
-    	System.out.println("Le joueur a construit une maison sur " + c.nom + " il y en a maintenant "+ c.nbMaison);
     }
 }
