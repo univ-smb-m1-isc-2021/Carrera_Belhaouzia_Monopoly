@@ -35,10 +35,11 @@ public class Joueur {
     	c.acheterCase(this);
     }
 
-    public void acheterMaison() {
+    public void acheterMaison(String cmd) {
+    	int m  = Integer.parseInt(cmd);
     	CasePropriete c = (CasePropriete)current;
     	if(c.estConstructible(this)) {
-    		l.get(0).construireMaison();
+    		l.get(m).construireMaison();
     	}
     }
 
@@ -72,4 +73,12 @@ public class Joueur {
     public List<CasePropriete> getListeCase() {
 		return l;
     }
+
+	public void afficherConstructible() {
+		List<CasePropriete> l1  = getListeCaseConst();
+		System.out.println("Entrez le numéro de la case");
+		for(int i = 0 ; i < l1.size() ; i++) {
+			System.out.println(i + " - " + l1.get(i).nom);
+		}
+	}
 }

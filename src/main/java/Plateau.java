@@ -10,7 +10,7 @@ public class Plateau {
     public Plateau() {
     	l = new ArrayList<Case>();
     	current_de = 0;
-    	de_pipe = new int[]{2,4,4,10,8,9,9,3,7};
+    	de_pipe = new int[]{2,4,4,10,8,9,9,3,7,0};
     }
 
     public void creationCase() {
@@ -60,7 +60,7 @@ public class Plateau {
     	l.add(new CasePropriete("Rue de la paix",320, 400,q8));
     }
 
-    public int lancerDe(Joueur courant) {
+    public String lancerDe(Joueur courant) {
     	Case c = courant.recupererCase();
     	int positionCase = l.indexOf(c);
     	int random = de_pipe[current_de];
@@ -72,7 +72,18 @@ public class Plateau {
     	}
     	System.out.println("c'est le tour de " + courant.nom + " , il/elle a fait un " + random + " il/elle tombe sur la case " + l.get(nouvellePosition).nom);
     	courant.avancer(l.get(nouvellePosition));
-		return 0;
+    	
+    	String res = "";
+    	if(courant.current instanceof CasePropriete && ((CasePropriete)courant.current).etat instanceof Libre ) {
+    		res += "acheter case-";
+    	}
+    	if(courant.getListeCaseConst().size() > 0) {
+    		res += "acheter maison-";
+    	}
+    	if(res == "") {
+    		res = "Rien à faire";
+    	}
+		return res;
     }
 
     public boolean passerdepart(int positionCase, int nouvellePosition) {
