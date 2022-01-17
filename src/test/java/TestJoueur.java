@@ -7,10 +7,8 @@ import main.java.CasePropriete;
 import main.java.Joueur;
 
 public class TestJoueur extends TestCase{	
-	public TestJoueur(String name) {
-		super(name);
-	}
 
+	@Test
 	public void test() {
 		Joueur j = new Joueur("Zohir");
 	    System.out.println("Test joueur : ");

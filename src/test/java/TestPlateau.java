@@ -6,10 +6,8 @@ import junit.framework.TestCase;
 import main.java.Plateau;
 
 public class TestPlateau extends TestCase{
-	public TestPlateau(String name) {
-		super(name);
-	}
 
+	@Test
 	public void test() {
 		Plateau p = new Plateau();
 	    System.out.println("Test plateau : ");
