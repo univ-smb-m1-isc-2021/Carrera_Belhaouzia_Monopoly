@@ -25,7 +25,7 @@ public class Main {
 		String cmd ="";
 		String [] words;
 		
-		while(true) {
+		while(!cmd.equals("quit")) {
 			String option = p.lancerDe(courant);
 			System.out.println(option);
 	 		words = option.split("-", 3);
