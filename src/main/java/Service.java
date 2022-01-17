@@ -24,7 +24,7 @@ public class Service extends CasePropriete {
     	byte bytes[] = new byte[20];
     	random.nextBytes(bytes);
     	int i = bytes[0];
-    	return i% 12;
+    	return (i % 12);
     	
     }
 
