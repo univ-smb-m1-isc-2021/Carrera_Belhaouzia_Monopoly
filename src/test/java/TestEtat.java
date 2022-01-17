@@ -29,6 +29,7 @@ public class TestEtat  extends TestCase{
         assertTrue(j.current.equals(c));
         j.acheterCase();
         assertTrue(c.estConstructible(j));
+        assertTrue(c.etat.estConstructible());
         int old = j.argent;
         e.atterirJoueur(j);
         assertTrue(j.argent==old);
