@@ -80,7 +80,7 @@ public class Plateau {
     	if(courant.getListeCaseConst().size() > 0) {
     		res += "acheter maison-";
     	}
-    	if(res == "") {
+    	if(res.equals("")) {
     		res = "Rien à faire";
     	}
 		return res;
