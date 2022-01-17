@@ -13,7 +13,7 @@ public class TestEtat  extends TestCase{
 		super(name);
 	}
 	
-	@Test
+
 	public void test() {
 		Joueur j = new Joueur("Thomas Le BG du 74");
     	Quartier q4 = new Quartier("Orange",1);

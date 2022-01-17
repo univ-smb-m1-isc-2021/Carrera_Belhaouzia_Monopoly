@@ -9,7 +9,7 @@ public class TestMonopoly extends TestCase{
 	public TestMonopoly(String name) {
 		super(name);
 	}
-	@Test
+
 	public void test() {
 		Monopoly m = new Monopoly();
 	    System.out.println("Test monopoly : ");

@@ -12,7 +12,7 @@ class JUnitTest extends TestCase{
 	public JUnitTest(String name) {
 		super(name);
 	}
-	@Test
+
 	public void test() {
 	    System.out.println("simpleTest");
 	    assertTrue(true);

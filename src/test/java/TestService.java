@@ -11,7 +11,7 @@ public class TestService extends TestCase{
 		super(name);
 	}
 	
-	@Test
+
 	public void test() {
 		Service s = new Service("TEST",0,0,null);
 		int i = s.lancerdeService();
