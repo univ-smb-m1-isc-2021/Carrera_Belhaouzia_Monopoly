@@ -22,9 +22,6 @@ public class Constructible extends Etat {
 		System.out.println("Le joueur " + joueur.nom +  " ("+ joueur.argent+") paye " + loyer + " a " + c.j.nom + " ("+ c.j.argent+")");
     }
 
-    public void acheterCase() {
-    }
-
     public boolean verifierQuartier(Joueur p1) {
     	boolean verif = c.getQuartier().possedeQuartier(p1);
     	if(verif) {
@@ -32,13 +29,6 @@ public class Constructible extends Etat {
     	}
 		return verif;
     }
-
-    public void changerEtat(Etat p1) {
-    }
-
-    public void calculLoyer(int p1) {
-    }
-
     public void construireMaison() {
     	c.getProprietaire().debiterJoueur(c.getPrixMaison());
     	c.setNbMaison(1);
