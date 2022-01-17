@@ -11,7 +11,5 @@ public class Case {
     	this.cout = cout;
     }
 
-    public void atterirJoueur(Joueur joueur) {
-    }
 
 }
