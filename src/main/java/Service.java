@@ -1,5 +1,7 @@
 package main.java;
 
+import java.security.SecureRandom;
+
 public class Service extends CasePropriete {
 	
     public Service(String nom, int cout, int prixMaison,Quartier q) {
@@ -18,7 +20,11 @@ public class Service extends CasePropriete {
     }
 
     public int lancerdeService() {
-    	return (int)(Math.random() * 12);
+    	SecureRandom random = new SecureRandom(); 
+    	byte bytes[] = new byte[20];
+    	random.nextBytes(bytes);
+    	return bytes[0] * 12;
+    	
     }
 
 }
