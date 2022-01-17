@@ -2,6 +2,7 @@ package test.java;
 
 import org.junit.jupiter.api.Test;
 
+
 import junit.framework.TestCase;
 import main.java.Monopoly;
 
@@ -17,6 +18,7 @@ public class TestMonopoly extends TestCase{
 	    assertTrue(m.lancerPartie().equals(m.l.get(0)));
 	    assertTrue(m.finisTour().equals(m.l.get(1)));
 	    assertTrue(m.finisTour().equals(m.l.get(0)));
+	    assertTrue(m.getPlateau().equals(m.p));
 	    
 	}
 }
