@@ -7,12 +7,7 @@
   <maven.compiler.source>1.8</maven.compiler.source>
   <maven.compiler.target>1.8</maven.compiler.target>
   <sonar.organization>univ-smb-m1-isc-2021</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-   <org.jacoco.version>0.8.5</org.jacoco.version>
-   <sonar.language>java</sonar.language>
-   <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-   <sonar.coverage.jacoco.xmlReportPaths>${maven.multiModuleProjectDirectory}/dynamo-report-aggregator/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-  
+  <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
   </properties>
   <dependencies>
   <dependency>
@@ -32,19 +27,7 @@
   
   <build>
     <plugins>
-	 <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${org.jacoco.version}</version>
-                <executions>
-                    <execution>
-                        <id>prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+	
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
