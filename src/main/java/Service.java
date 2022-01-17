@@ -23,7 +23,8 @@ public class Service extends CasePropriete {
     	SecureRandom random = new SecureRandom(); 
     	byte bytes[] = new byte[20];
     	random.nextBytes(bytes);
-    	return bytes[0] * 12;
+    	int i = bytes[0];
+    	return i% 12;
     	
     }
 
